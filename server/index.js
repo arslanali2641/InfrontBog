@@ -60,6 +60,7 @@ app.get("/api/posts", (req, res) => {
 
 
 //Server Listen
-app.listen(3008, () => {
-    console.log("Server i working on port 3008");
+const PORT = process.env.port || 3000;
+app.listen(PORT, () => {
+  console.log("Server i working on port" + PORT);
 });
